@@ -1,0 +1,242 @@
+.tuner-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+}
+
+.guitar-selector {
+    text-align: center;
+    margin-top: 60px;
+    &__guitar {
+        width: 238px;
+        height: 225px;
+        display: block;
+        -webkit-box-shadow: 2px 2px 20px 3px  #bebebe,
+        -2px -2px 20px 3px #bebebe;
+                box-shadow: 2px 2px 20px 3px  #bebebe,
+        -2px -2px 20px 3px #bebebe;
+        border-radius: 18px;
+        -webkit-border-radius: 18px;
+        -moz-border-radius: 18px;
+        -ms-border-radius: 18px;
+        -o-border-radius: 18px;
+    }
+    &__image {
+        height: 100%;
+    }
+}
+.cls11 {
+    fill: green;
+    background: black;
+    color: white;
+}
+.guitar {
+    position: relative;
+    height: 495px;
+    width: 335px;
+    margin-top: 60px;
+    background: $guitarBgRed;
+    -webkit-box-shadow: 1px 1px 25px 1px  #bebebe,
+    -1px -1px 25px 1px #bebebe;
+            box-shadow: 1px 1px 25px 1px  #bebebe,
+    -1px -1px 25px 1px #bebebe;
+    
+    &__image {
+        display: block;
+        margin: 59px auto 0 auto;
+        transform: scale(1.6)    ;
+        -webkit-transform: scale(1.6)    ;
+        -moz-transform: scale(1.6)    ;
+        -ms-transform: scale(1.6)    ;
+        -o-transform: scale(1.6)    ;
+    }
+    border-radius: 18px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+}
+
+.string-connectors {
+    
+    position: relative;
+    &__connector {
+        height: 2px;
+        background:  $passiveConnector;
+        position: absolute;
+        left: -15%;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+        border-radius: 20px;
+    }
+
+    &__connector:hover {
+        background: $activeConnector;
+    }
+
+    &__connector:hover > div {
+        background: $activeConnector;
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+    }
+
+    &__switch {
+        z-index: 2;
+        text-align: center;
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 50px;
+        background: $guitarBgRed;
+        top: -13px;
+        left: -10px;
+        cursor: pointer;
+        -webkit-transition: all 1s;
+        transition: all 1s;
+    }
+    
+    &__connector_0 {
+        width: 197px;
+        top: 13%;
+    }
+    &__connector_1 {
+        width: 185px;
+        top: 22%;
+    }
+    &__connector_2 {
+        width: 173px;
+        top: 30%;
+    }
+    &__connector_3 {
+        width: 155px;
+        top: 39%;
+    }
+    &__connector_4 {
+        width: 140px;
+        top: 48%;
+    }
+    &__connector_5 {
+        width: 123px;
+        top: 58%;
+    }
+}
+
+.string-switches {
+    position: relative;
+    
+    &__string {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: $guitarBgRed;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+    }
+    
+    &__string_0 {
+        top: 42%;
+        left: 7%;
+    }
+    &__string_1 {
+        top: 49%;
+        left: 7%;
+    }
+    &__string_2 {
+        top: 56%;
+        left: 7%;
+    }
+    &__string_3 {
+        top: 63%;
+        left: 7%;
+    }
+    &__string_4 {
+        top: 70.5%;
+        left: 7%;
+    }
+    &__string_5 {
+        top: 78%;
+        left: 7%;
+    }
+    
+}
+
+.tuning {
+    margin-top: 145px;
+    text-align: center;
+    width: 220px;
+    height: 330px;
+    background: $listBg;
+    border-radius: 18px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+
+    &__hint {
+        font-weight: 300;
+    }
+}
+
+.tunes-list {
+    padding: 15px;
+    height: 260px;
+    overflow-y: scroll;
+    &__item {
+        position: relative;
+        font-weight: 300;
+        color: white;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        padding-bottom: 5px;
+        letter-spacing: 1px;
+    }
+    
+    &__item_active::before {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 15%;
+        left: -6%;
+        width: 6px;
+        height: 6px;
+        background: $selectDot;
+        border: 2px solid #eee;
+        border-radius: 50px;
+    }
+}
+
+.arrow-container {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 100%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-top: 25px;
+}
+
+.arrow {
+    &__icon {
+        font-size: 30px;
+        color: $selectDot;
+    }
+}

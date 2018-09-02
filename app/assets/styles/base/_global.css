@@ -1,5 +1,5 @@
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Quicksand", sans-serif;
     color: #333;
 }
 
@@ -13,5 +13,11 @@ img {
 }
 
 a {
-    color: #d59541;
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
 }

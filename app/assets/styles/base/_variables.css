@@ -1,1 +1,49 @@
-/* $mainBlue: #2f5572; */
+$subheading: rgb(168,	200,	56	);
+$guitarBgRed: rgb(184, 114, 114	);
+$listBg: rgb(168, 200,	56	);
+$selectDot: rgb(74,	184,	120	);
+$activeConnector: rgb(31, 187, 96);
+$passiveConnector: rgb(204, 204, 204);
+
+
+@-webkit-keyframes sound {
+    0% {
+        stroke: #fff !important;
+    }
+    30% {
+        stroke: rgb(31, 187, 96) !important;
+    }
+    50% {
+        stroke: rgb(31, 187, 96) !important;
+    }
+    70% {
+        stroke: rgb(31, 187, 96) !important;
+    }
+    100% {
+        stroke: #fff !important;
+    }
+}
+
+
+@keyframes sound {
+    0% {
+        stroke: #fff !important;
+    }
+    30% {
+        stroke: rgb(31, 187, 96) !important;
+    }
+    50% {
+        stroke: rgb(31, 187, 96) !important;
+    }
+    70% {
+        stroke: rgb(31, 187, 96) !important;
+    }
+    100% {
+        stroke: #fff !important;
+    }
+}
+.active {
+    stroke-width: 5px !important;
+    -webkit-animation: sound 2s linear;
+            animation: sound 2s linear; 
+}
