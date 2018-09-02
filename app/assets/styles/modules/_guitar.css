@@ -5,15 +5,21 @@
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+            flex-wrap: wrap;
+            width: 100%;
 }
 
 .guitar-selector {
+    flex-basis: 100%;
+    display: flex;
     text-align: center;
     margin-top: 60px;
     &__guitar {
-        width: 238px;
+        max-width: 238px;
         height: 225px;
         display: block;
+        flex-basis: 40%;
+        margin: 0 auto 55px auto;
         -webkit-box-shadow: 2px 2px 20px 3px  #bebebe,
         -2px -2px 20px 3px #bebebe;
                 box-shadow: 2px 2px 20px 3px  #bebebe,
@@ -25,52 +31,57 @@
         -o-border-radius: 18px;
     }
     &__image {
-        height: 100%;
+        position: relative;
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    @mixin atLarge {
+        flex-basis: 20%;
+        display: block;
     }
 }
-.cls11 {
-    fill: green;
-    background: black;
-    color: white;
-}
+
 .guitar {
+    flex-basis: 25%;
     position: relative;
     height: 495px;
     width: 335px;
     margin-top: 60px;
-    background: $guitarBgRed;
+    background: $guitarBg;
     -webkit-box-shadow: 1px 1px 25px 1px  #bebebe,
     -1px -1px 25px 1px #bebebe;
             box-shadow: 1px 1px 25px 1px  #bebebe,
     -1px -1px 25px 1px #bebebe;
-    
-    &__image {
-        display: block;
-        margin: 59px auto 0 auto;
-        transform: scale(1.6)    ;
-        -webkit-transform: scale(1.6)    ;
-        -moz-transform: scale(1.6)    ;
-        -ms-transform: scale(1.6)    ;
-        -o-transform: scale(1.6)    ;
-    }
     border-radius: 18px;
     -webkit-border-radius: 18px;
     -moz-border-radius: 18px;
     -ms-border-radius: 18px;
     -o-border-radius: 18px;
+
+    &__image {
+        display: block;
+        margin-left: -100px;
+        margin-top: -55px;
+    }
+
+   
 }
 
 .string-connectors {
-    
     position: relative;
     &__connector {
         height: 2px;
         background:  $passiveConnector;
         position: absolute;
-        left: -15%;
+        left: 8%;
         -webkit-transition: all .5s;
         transition: all .5s;
         border-radius: 20px;
+
+        @mixin atExtraSmall {
+            left: -15%;
+        }
     }
 
     &__connector:hover {
@@ -84,16 +95,15 @@
     }
 
     &__switch {
-        z-index: 2;
         text-align: center;
         display: block;
         position: absolute;
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
         border-radius: 50px;
-        background: $guitarBgRed;
-        top: -13px;
+        background: $passiveConnector;
+        top: -16px;
         left: -10px;
         cursor: pointer;
         -webkit-transition: all 1s;
@@ -101,28 +111,48 @@
     }
     
     &__connector_0 {
-        width: 197px;
-        top: 13%;
+        width: 124px;
+        top: 12.7%;
+
+        @mixin atExtraSmall {
+            width: 204.5px;
+        }
     }
     &__connector_1 {
-        width: 185px;
-        top: 22%;
+        width: 110px;
+        top: 21%;
+        @mixin atExtraSmall {
+            width: 190px;
+        }
     }
     &__connector_2 {
-        width: 173px;
-        top: 30%;
+        width: 99px;
+        top: 29.3%;
+        @mixin atExtraSmall {
+            width: 178.5px;
+        }
     }
     &__connector_3 {
-        width: 155px;
-        top: 39%;
+        width: 85px;
+        top: 37.6%;
+        @mixin atExtraSmall {
+            width: 165px;
+        }
     }
     &__connector_4 {
-        width: 140px;
-        top: 48%;
+
+        width: 71px;
+        top: 45.9%;
+        @mixin atExtraSmall {
+            width: 150px;
+        }
     }
     &__connector_5 {
-        width: 123px;
-        top: 58%;
+        width: 61px;
+        top: 54.2%;
+        @mixin atExtraSmall {
+            width: 139.5px;
+        }
     }
 }
 
@@ -133,7 +163,7 @@
         position: absolute;
         width: 40px;
         height: 40px;
-        background: $guitarBgRed;
+        background: $guitarBg;
         border-radius: 50px;
         -webkit-border-radius: 50px;
         -moz-border-radius: 50px;
@@ -169,7 +199,8 @@
 }
 
 .tuning {
-    margin-top: 145px;
+    flex-basis: 60%;
+    margin-top: 60px;
     text-align: center;
     width: 220px;
     height: 330px;
@@ -180,6 +211,11 @@
     -ms-border-radius: 18px;
     -o-border-radius: 18px;
 
+    @mixin atMedium {
+        flex-basis: 15%;
+        margin-top: 145px;
+    }
+
     &__hint {
         font-weight: 300;
     }
@@ -188,8 +224,15 @@
 .tunes-list {
     padding: 15px;
     height: 260px;
+    width: 100%;
+    margin: 0 auto;
     overflow-y: scroll;
+
+    @mixin atMedium {
+        width: 216px;
+    }
     &__item {
+        font-size: 1.2rem;
         position: relative;
         font-weight: 300;
         color: white;
@@ -197,46 +240,35 @@
         display: -ms-flexbox;
         display: flex;
         -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-evenly;
         padding-bottom: 5px;
         letter-spacing: 1px;
+
+        @mixin atMedium {
+            font-size: 1rem;
+        }
     }
     
     &__item_active::before {
         display: block;
         content: "";
         position: absolute;
+        left: 0;
         top: 15%;
-        left: -6%;
         width: 6px;
         height: 6px;
         background: $selectDot;
         border: 2px solid #eee;
         border-radius: 50px;
-    }
-}
-
-.arrow-container {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    width: 100%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    margin-top: 25px;
-}
-
-.arrow {
-    &__icon {
-        font-size: 30px;
-        color: $selectDot;
+        @mixin atExtraSmall {
+            left: 2%;
+        }
+        @mixin atSmall {
+            left: 5%;
+        }
+        @mixin atMedium {
+            left: -2%;
+        }
     }
 }

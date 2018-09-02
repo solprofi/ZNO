@@ -11,9 +11,15 @@
         top: 50%;
         display: block;
         content: "";
-        width: 35%;
+        width: 12%;
         height: 2px;
         background: black;
+        @mixin atSmall {
+            width: 22%;
+        }
+        @mixin atMedium {
+            width: 32%;
+        }
     }
 
     &__subheading {

@@ -2,15 +2,13 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'> -->
   <title>Guitar Tuner</title>
   <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="./temp/styles/styles.css">
 </head>
 <body>
   <section class="guitar-tuner">
-    <h1 class="guitar-tuner__heading">Electric Guitar online Tuner</h1>
+    <h1 class="guitar-tuner__heading">Electric Guitar Tuner</h1>
     <h2 class="guitar-tuner__subheading">Tap the note, tune the string to the tone.</h2>
     <div class="tuner-container">
       
@@ -36,10 +34,6 @@
           </div>
         </div>
         <object class="guitar__image" id="guitar-svg" data="./assets/images/electric.svg" type="image/svg+xml" ></object>
-        <div class="arrow-container">
-          <a href="#" class="arrow"><i class="arrow__icon fas fa-long-arrow-alt-left"></i></a>
-          <a href="#" class="arrow"><i class="arrow__icon fas fa-long-arrow-alt-right"></i></a>
-        </div>
       </div>
       
       <div class="tuning">
@@ -115,40 +109,17 @@
       <div class="guitar-selector">
         <a href="#" class="guitar-selector__guitar">
           <img class="guitar-selector__image" src="./assets/images/acoustic_icon.png" alt="">
+          <h3 class="guitar-selector__name">Acoustic</h3>
         </a>
-        <h3 class="guitar-selector__name">Acoustic</h3>
+        
         <a href="#" class="guitar-selector__guitar">
           <img class="guitar-selector__image" src="./assets/images/bass_icon.png" alt="">
+          <h3 class="guitar-selector__name">Bass</h3>
         </a>
-        <h3 class="guitar-selector__name">Bass</h3>
       </div>
     </div>
   </section>
-
+  
   <script src="./assets/js/svg-work.js"></script>
 </body>
 </html>
-
-<!-- 
-@keyframes sound {
-  0% {
-      stroke: rgba(31, 187, 96,0) !important;
-      stroke-width:2.5px !important;
-  }
-  30% {
-     stroke: rgba(31, 187, 96, 0.5) !important;
-     stroke-width:3px !important;
-  }
-  50% {
-      stroke: rgba(31, 187, 96, 1) !important;
-      stroke-width:5px !important;
-  }
-  70% {
-      stroke: rgba(31, 187, 96, 0.5) !important;
-      stroke-width:3px !important;
-  }
-  100% {
-      stroke: rgba(31, 187, 96, 0) !important;
-      stroke-width:2.5px !important;
-  }
-  } -->
