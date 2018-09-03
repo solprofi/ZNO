@@ -542,10 +542,10 @@ ul {
         -ms-flex-preferred-size: 40%;
             flex-basis: 40%;
         margin: 0 auto 55px auto;
-        -webkit-box-shadow: 2px 2px 20px 3px  #bebebe,
-        -2px -2px 20px 3px #bebebe;
-                box-shadow: 2px 2px 20px 3px  #bebebe,
-        -2px -2px 20px 3px #bebebe;
+        -webkit-box-shadow: 1px 1px 25px 1px  #bebebe,
+        -1px -1px 25px 1px #bebebe;
+                box-shadow: 1px 1px 25px 1px  #bebebe,
+                -1px -1px 25px 1px #bebebe;
         border-radius: 18px;
         -webkit-border-radius: 18px;
         -moz-border-radius: 18px;
@@ -573,7 +573,7 @@ ul {
         flex-basis: 25%;
     position: relative;
     height: 495px;
-    width: 335px;
+    width: 360px;
     margin-top: 60px;
     background: rgb(114, 183, 122);
     -webkit-box-shadow: 1px 1px 25px 1px  #bebebe,
@@ -595,6 +595,10 @@ ul {
         margin-top: -55px;
     }
 
+.guitar__image_acoustic {
+        margin-left: -95px;
+    }
+
 .string-connectors {
     position: relative;
 }
@@ -603,16 +607,41 @@ ul {
         height: 2px;
         background:  rgb(204, 204, 204);
         position: absolute;
-        left: 8%;
         -webkit-transition: all .5s;
         transition: all .5s;
         border-radius: 20px;
     }
 
+.string-connectors__connector_electric {
+        left: 8%;
+    }
+
 @media (min-width: 480px) {
 
-.string-connectors__connector {
+.string-connectors__connector_electric {
             left: -15%
+    }
+  }
+
+.string-connectors__connector_acoustic-left {
+        left: 5%;
+    }
+
+@media (min-width: 480px) {
+
+.string-connectors__connector_acoustic-left {
+            left: -15%
+    }
+  }
+
+.string-connectors__connector_acoustic-right {
+        right: 5%;
+    }
+
+@media (min-width: 480px) {
+
+.string-connectors__connector_acoustic-right {
+            right: -15%
     }
   }
 
@@ -636,61 +665,117 @@ ul {
         border-radius: 50px;
         background: rgb(204, 204, 204);
         top: -16px;
-        left: -10px;
         cursor: pointer;
         -webkit-transition: all 1s;
         transition: all 1s;
     }
 
-.string-connectors__connector_0 {
+.string-connectors__switch_left {
+        left: -10px;
+    }
+
+.string-connectors__switch_right {
+        right: -10px;
+    }
+
+/* CONNECTORS FOR Acoustic GUITAR */
+
+.string-connectors__connector_0-acoustic,
+     .string-connectors__connector_1-acoustic,
+     .string-connectors__connector_2-acoustic,
+     .string-connectors__connector_3-acoustic,
+     .string-connectors__connector_4-acoustic,
+     .string-connectors__connector_5-acoustic {
+        width: 38px;
+     }
+
+@media (min-width: 480px) {
+
+.string-connectors__connector_0-acoustic,
+     .string-connectors__connector_1-acoustic,
+     .string-connectors__connector_2-acoustic,
+     .string-connectors__connector_3-acoustic,
+     .string-connectors__connector_4-acoustic,
+     .string-connectors__connector_5-acoustic {
+            width: 110px
+     }
+  }
+
+.string-connectors__connector_0-acoustic {
+        top: 52%;
+    }
+
+.string-connectors__connector_1-acoustic {
+        top: 39%;
+    }
+
+.string-connectors__connector_2-acoustic {
+        top: 25%;
+    }
+
+.string-connectors__connector_3-acoustic {
+        top: 25%;
+    }
+
+.string-connectors__connector_4-acoustic {
+        top: 39%;
+    }
+
+.string-connectors__connector_5-acoustic {
+        top: 52%;
+    }
+
+/* CONNECTORS FOR ELECTRIC GUITAR */
+
+.string-connectors__connector_0-electric {
         width: 124px;
         top: 12.7%;
     }
 
 @media (min-width: 480px) {
 
-.string-connectors__connector_0 {
+.string-connectors__connector_0-electric {
             width: 204.5px
     }
   }
 
-.string-connectors__connector_1 {
+.string-connectors__connector_1-electric {
         width: 110px;
         top: 21%;
     }
 
 @media (min-width: 480px) {
 
-.string-connectors__connector_1 {
+.string-connectors__connector_1-electric {
             width: 190px
     }
   }
 
-.string-connectors__connector_2 {
+.string-connectors__connector_2-electric {
         width: 99px;
         top: 29.3%;
     }
 
 @media (min-width: 480px) {
 
-.string-connectors__connector_2 {
+.string-connectors__connector_2-electric {
             width: 178.5px
     }
   }
 
-.string-connectors__connector_3 {
+.string-connectors__connector_3-electric {
         width: 85px;
         top: 37.6%;
     }
 
 @media (min-width: 480px) {
 
-.string-connectors__connector_3 {
+.string-connectors__connector_3-electric {
             width: 165px
     }
   }
 
-.string-connectors__connector_4 {
+.string-connectors__connector_4-electric {
 
         width: 71px;
         top: 45.9%;
@@ -698,19 +783,19 @@ ul {
 
 @media (min-width: 480px) {
 
-.string-connectors__connector_4 {
+.string-connectors__connector_4-electric {
             width: 150px
     }
   }
 
-.string-connectors__connector_5 {
+.string-connectors__connector_5-electric {
         width: 61px;
         top: 54.2%;
     }
 
 @media (min-width: 480px) {
 
-.string-connectors__connector_5 {
+.string-connectors__connector_5-electric {
             width: 139.5px
     }
   }
@@ -732,32 +817,32 @@ ul {
         -o-border-radius: 50px;
     }
 
-.string-switches__string_0 {
+.string-switches__string_0-electric {
         top: 42%;
         left: 7%;
     }
 
-.string-switches__string_1 {
+.string-switches__string_1-electric {
         top: 49%;
         left: 7%;
     }
 
-.string-switches__string_2 {
+.string-switches__string_2-electric {
         top: 56%;
         left: 7%;
     }
 
-.string-switches__string_3 {
+.string-switches__string_3-electric {
         top: 63%;
         left: 7%;
     }
 
-.string-switches__string_4 {
+.string-switches__string_4-electric {
         top: 70.5%;
         left: 7%;
     }
 
-.string-switches__string_5 {
+.string-switches__string_5-electric {
         top: 78%;
         left: 7%;
     }
@@ -812,6 +897,7 @@ ul {
         color: white;
         display: -webkit-box;
         display: -ms-flexbox;
+
         display: flex;
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;

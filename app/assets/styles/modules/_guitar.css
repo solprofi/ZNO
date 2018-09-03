@@ -20,10 +20,10 @@
         display: block;
         flex-basis: 40%;
         margin: 0 auto 55px auto;
-        -webkit-box-shadow: 2px 2px 20px 3px  #bebebe,
-        -2px -2px 20px 3px #bebebe;
-                box-shadow: 2px 2px 20px 3px  #bebebe,
-        -2px -2px 20px 3px #bebebe;
+        -webkit-box-shadow: 1px 1px 25px 1px  #bebebe,
+        -1px -1px 25px 1px #bebebe;
+                box-shadow: 1px 1px 25px 1px  #bebebe,
+                -1px -1px 25px 1px #bebebe;
         border-radius: 18px;
         -webkit-border-radius: 18px;
         -moz-border-radius: 18px;
@@ -46,7 +46,7 @@
     flex-basis: 25%;
     position: relative;
     height: 495px;
-    width: 335px;
+    width: 360px;
     margin-top: 60px;
     background: $guitarBg;
     -webkit-box-shadow: 1px 1px 25px 1px  #bebebe,
@@ -65,6 +65,10 @@
         margin-top: -55px;
     }
 
+    &__image_acoustic {
+        margin-left: -95px;
+    }
+
    
 }
 
@@ -74,13 +78,29 @@
         height: 2px;
         background:  $passiveConnector;
         position: absolute;
-        left: 8%;
         -webkit-transition: all .5s;
         transition: all .5s;
         border-radius: 20px;
+    }
 
+    &__connector_electric {
+        left: 8%;
         @mixin atExtraSmall {
             left: -15%;
+        }
+    }
+
+    &__connector_acoustic-left {
+        left: 5%;
+        @mixin atExtraSmall {
+            left: -15%;
+        }
+    }
+
+    &__connector_acoustic-right {
+        right: 5%;
+        @mixin atExtraSmall {
+            right: -15%;
         }
     }
 
@@ -104,13 +124,55 @@
         border-radius: 50px;
         background: $passiveConnector;
         top: -16px;
-        left: -10px;
         cursor: pointer;
         -webkit-transition: all 1s;
         transition: all 1s;
     }
-    
-    &__connector_0 {
+
+    &__switch_left {
+        left: -10px;
+    }
+
+    &__switch_right {
+        right: -10px;
+    }
+
+     /* CONNECTORS FOR Acoustic GUITAR */
+
+     &__connector_0-acoustic,
+     &__connector_1-acoustic,
+     &__connector_2-acoustic,
+     &__connector_3-acoustic,
+     &__connector_4-acoustic,
+     &__connector_5-acoustic {
+        width: 38px;
+
+        @mixin atExtraSmall {
+            width: 110px;
+        }
+     }
+    &__connector_0-acoustic {
+        top: 52%;
+    }
+
+    &__connector_1-acoustic {
+        top: 39%;
+    }
+    &__connector_2-acoustic {
+        top: 25%;
+    }
+    &__connector_3-acoustic {
+        top: 25%;
+    }
+    &__connector_4-acoustic {
+        top: 39%;
+    }
+    &__connector_5-acoustic {
+        top: 52%;
+    }
+
+    /* CONNECTORS FOR ELECTRIC GUITAR */
+    &__connector_0-electric {
         width: 124px;
         top: 12.7%;
 
@@ -118,28 +180,28 @@
             width: 204.5px;
         }
     }
-    &__connector_1 {
+    &__connector_1-electric {
         width: 110px;
         top: 21%;
         @mixin atExtraSmall {
             width: 190px;
         }
     }
-    &__connector_2 {
+    &__connector_2-electric {
         width: 99px;
         top: 29.3%;
         @mixin atExtraSmall {
             width: 178.5px;
         }
     }
-    &__connector_3 {
+    &__connector_3-electric {
         width: 85px;
         top: 37.6%;
         @mixin atExtraSmall {
             width: 165px;
         }
     }
-    &__connector_4 {
+    &__connector_4-electric {
 
         width: 71px;
         top: 45.9%;
@@ -147,7 +209,7 @@
             width: 150px;
         }
     }
-    &__connector_5 {
+    &__connector_5-electric {
         width: 61px;
         top: 54.2%;
         @mixin atExtraSmall {
@@ -171,27 +233,27 @@
         -o-border-radius: 50px;
     }
     
-    &__string_0 {
+    &__string_0-electric {
         top: 42%;
         left: 7%;
     }
-    &__string_1 {
+    &__string_1-electric {
         top: 49%;
         left: 7%;
     }
-    &__string_2 {
+    &__string_2-electric {
         top: 56%;
         left: 7%;
     }
-    &__string_3 {
+    &__string_3-electric {
         top: 63%;
         left: 7%;
     }
-    &__string_4 {
+    &__string_4-electric {
         top: 70.5%;
         left: 7%;
     }
-    &__string_5 {
+    &__string_5-electric {
         top: 78%;
         left: 7%;
     }
@@ -238,12 +300,14 @@
         color: white;
         display: -webkit-box;
         display: -ms-flexbox;
+
         display: flex;
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-evenly;
         padding-bottom: 5px;
         letter-spacing: 1px;
+
 
         @mixin atMedium {
             font-size: 1rem;
