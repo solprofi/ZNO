@@ -1,5 +1,5 @@
 <svg id="Layer_1" data-name="Layer 1"
-    xmlns="http://www.w3.org/2000/svg" width="550px" height="550px" viewBox="0 0 1000 1000">
+    xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="550px" height="550px" viewBox="0 0 1000 1000">
     <defs>
         <style>
         @-webkit-keyframes sound {

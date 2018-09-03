@@ -488,7 +488,7 @@ ul {
         top: 50%;
         display: block;
         content: "";
-        width: 12%;
+        width: 8%;
         height: 2px;
         background: black;
     }
@@ -496,14 +496,14 @@ ul {
 @media (min-width: 530px) {
 
 .guitar-tuner__heading::before {
-            width: 22%
+            width: 20%
     }
   }
 
 @media (min-width: 768px) {
 
 .guitar-tuner__heading::before {
-            width: 32%
+            width: 29%
     }
   }
 
@@ -518,11 +518,11 @@ ul {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-            -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
-            width: 100%;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
 }
 
 .guitar-selector {
@@ -544,8 +544,8 @@ ul {
         margin: 0 auto 55px auto;
         -webkit-box-shadow: 1px 1px 25px 1px  #bebebe,
         -1px -1px 25px 1px #bebebe;
-                box-shadow: 1px 1px 25px 1px  #bebebe,
-                -1px -1px 25px 1px #bebebe;
+        box-shadow: 1px 1px 25px 1px  #bebebe,
+        -1px -1px 25px 1px #bebebe;
         border-radius: 18px;
         -webkit-border-radius: 18px;
         -moz-border-radius: 18px;
@@ -578,15 +578,15 @@ ul {
     background: rgb(114, 183, 122);
     -webkit-box-shadow: 1px 1px 25px 1px  #bebebe,
     -1px -1px 25px 1px #bebebe;
-            box-shadow: 1px 1px 25px 1px  #bebebe,
+    box-shadow: 1px 1px 25px 1px  #bebebe,
     -1px -1px 25px 1px #bebebe;
     border-radius: 18px;
     -webkit-border-radius: 18px;
     -moz-border-radius: 18px;
     -ms-border-radius: 18px;
     -o-border-radius: 18px;
-
-   
+    
+    
 }
 
 .guitar__image {
@@ -597,6 +597,11 @@ ul {
 
 .guitar__image_acoustic {
         margin-left: -95px;
+    }
+
+.guitar__image_bass {
+        margin-left: -90px;
+        margin-top: -45px;
     }
 
 .string-connectors {
@@ -611,6 +616,17 @@ ul {
         transition: all .5s;
         border-radius: 20px;
     }
+
+.string-connectors__connector_bass {
+        left: 7%;
+    }
+
+@media (min-width: 480px) {
+
+.string-connectors__connector_bass {
+            left: -15%
+    }
+  }
 
 .string-connectors__connector_electric {
         left: 8%;
@@ -652,7 +668,7 @@ ul {
 .string-connectors__connector:hover > div {
         background: rgb(114, 183, 122);
         -webkit-transform: scale(1.1);
-                transform: scale(1.1);
+        transform: scale(1.1);
     }
 
 .string-connectors__switch {
@@ -678,27 +694,77 @@ ul {
         right: -10px;
     }
 
+/* CONNECTORS FOR BASS GUITAR */
+
+.string-connectors__connector_0-bass {
+        top: 57%;
+        width: 41px;
+    }
+
+@media (min-width: 480px) {
+
+.string-connectors__connector_0-bass {
+            width: 121px
+    }
+  }
+
+.string-connectors__connector_1-bass {
+        top: 41%;
+        width: 55px;
+    }
+
+@media (min-width: 480px) {
+
+.string-connectors__connector_1-bass {
+            width: 133px
+    }
+  }
+
+.string-connectors__connector_2-bass {
+        top: 25%;
+        width: 70px;
+    }
+
+@media (min-width: 480px) {
+
+.string-connectors__connector_2-bass {
+            width: 148px
+    }
+  }
+
+.string-connectors__connector_3-bass {
+        top: 9%;
+        width: 90.5\px;
+    }
+
+@media (min-width: 480px) {
+
+.string-connectors__connector_3-bass {
+            width: 169px
+    }
+  }
+
 /* CONNECTORS FOR Acoustic GUITAR */
 
 .string-connectors__connector_0-acoustic,
-     .string-connectors__connector_1-acoustic,
-     .string-connectors__connector_2-acoustic,
-     .string-connectors__connector_3-acoustic,
-     .string-connectors__connector_4-acoustic,
-     .string-connectors__connector_5-acoustic {
+    .string-connectors__connector_1-acoustic,
+    .string-connectors__connector_2-acoustic,
+    .string-connectors__connector_3-acoustic,
+    .string-connectors__connector_4-acoustic,
+    .string-connectors__connector_5-acoustic {
         width: 38px;
-     }
+    }
 
 @media (min-width: 480px) {
 
 .string-connectors__connector_0-acoustic,
-     .string-connectors__connector_1-acoustic,
-     .string-connectors__connector_2-acoustic,
-     .string-connectors__connector_3-acoustic,
-     .string-connectors__connector_4-acoustic,
-     .string-connectors__connector_5-acoustic {
+    .string-connectors__connector_1-acoustic,
+    .string-connectors__connector_2-acoustic,
+    .string-connectors__connector_3-acoustic,
+    .string-connectors__connector_4-acoustic,
+    .string-connectors__connector_5-acoustic {
             width: 110px
-     }
+    }
   }
 
 .string-connectors__connector_0-acoustic {
@@ -776,7 +842,7 @@ ul {
   }
 
 .string-connectors__connector_4-electric {
-
+        
         width: 71px;
         top: 45.9%;
     }
@@ -897,7 +963,7 @@ ul {
         color: white;
         display: -webkit-box;
         display: -ms-flexbox;
-
+        
         display: flex;
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -944,5 +1010,157 @@ ul {
 
 .tunes-list__item_active::before {
             left: -2%
+    }
+  }
+
+.choice-box {
+    display: block;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+}
+
+@media (min-width: 768px) {
+
+.choice-box {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex
+}
+  }
+
+.choice-box__guitar {
+        text-align: center;
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        margin-bottom: 30px;
+    }
+
+@media (min-width: 768px) {
+
+.choice-box__guitar {
+            margin-bottom: 0
+    }
+  }
+
+.choice-box__image {
+        height: 450px;
+        width: auto;
+    }
+
+@media (min-width: 768px) {
+
+.choice-box__image {
+            height: 400px
+    }
+  }
+
+.choice-box__name {
+        text-transform: uppercase;
+        font-weight: 700;
+        margin: 20px 0;
+    }
+
+.choice-box__button {
+        display: block;
+        width: 150px;
+        margin: 0 auto;
+        padding: 10px 0;
+        border-radius: 8px;
+        text-transform: uppercase;
+        background: rgb(209, 64, 64);
+        color: rgb(255, 255, 255);
+    }
+
+.choice-box__button:hover {
+        background: rgb(179, 57, 57);
+    }
+
+.main-nav {
+    background: rgb(255, 255, 255);
+}
+
+.main-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.219);
+
+}
+
+.main-list__item {
+        height: 65px;
+        -ms-flex-preferred-size: 8%;
+            flex-basis: 8%;
+        text-align: center;
+    }
+
+.main-list__item:first-of-type {
+        margin-right: auto;
+    }
+
+.main-list__link {
+        display: block;
+        text-transform: uppercase;
+        padding: 20px 10px;
+        border-bottom: 1px solid transparent;
+        border-radius: 2px;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+    }
+
+.main-list__link:hover {
+        border-bottom: 1px solid rgb(31, 141, 31);
+        -webkit-transform: scale(1.05);
+                transform: scale(1.05);
+    }
+
+.main-list__link_logo,
+    .main-list__link_logo:hover {
+        border-bottom: none !important;
+    }
+
+.guitar-choice__heading {
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+@media (min-width: 768px) {
+
+.guitar-choice__heading {
+            font-size: 2rem
+    }
+  }
+
+.guitar-choice__subheading {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+@media (min-width: 768px) {
+
+.guitar-choice__subheading {
+            font-size: 1.5rem
+    }
+  }
+
+.guitar-choice__hint {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+@media (min-width: 768px) {
+
+.guitar-choice__hint {
+            font-size: 1.2rem
     }
   }

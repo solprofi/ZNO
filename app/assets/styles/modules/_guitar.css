@@ -3,10 +3,10 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-            flex-wrap: wrap;
-            width: 100%;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .guitar-selector {
@@ -22,8 +22,8 @@
         margin: 0 auto 55px auto;
         -webkit-box-shadow: 1px 1px 25px 1px  #bebebe,
         -1px -1px 25px 1px #bebebe;
-                box-shadow: 1px 1px 25px 1px  #bebebe,
-                -1px -1px 25px 1px #bebebe;
+        box-shadow: 1px 1px 25px 1px  #bebebe,
+        -1px -1px 25px 1px #bebebe;
         border-radius: 18px;
         -webkit-border-radius: 18px;
         -moz-border-radius: 18px;
@@ -35,7 +35,7 @@
         max-height: 100%;
         max-width: 100%;
     }
-
+    
     @mixin atLarge {
         flex-basis: 20%;
         display: block;
@@ -51,25 +51,30 @@
     background: $guitarBg;
     -webkit-box-shadow: 1px 1px 25px 1px  #bebebe,
     -1px -1px 25px 1px #bebebe;
-            box-shadow: 1px 1px 25px 1px  #bebebe,
+    box-shadow: 1px 1px 25px 1px  #bebebe,
     -1px -1px 25px 1px #bebebe;
     border-radius: 18px;
     -webkit-border-radius: 18px;
     -moz-border-radius: 18px;
     -ms-border-radius: 18px;
     -o-border-radius: 18px;
-
+    
     &__image {
         display: block;
         margin-left: -100px;
         margin-top: -55px;
     }
-
+    
     &__image_acoustic {
         margin-left: -95px;
     }
 
-   
+    &__image_bass {
+        margin-left: -90px;
+        margin-top: -45px;
+    }
+    
+    
 }
 
 .string-connectors {
@@ -82,38 +87,45 @@
         transition: all .5s;
         border-radius: 20px;
     }
-
+    
+    &__connector_bass {
+        left: 7%;
+        @mixin atExtraSmall {
+            left: -15%;
+        }
+    }
+    
     &__connector_electric {
         left: 8%;
         @mixin atExtraSmall {
             left: -15%;
         }
     }
-
+    
     &__connector_acoustic-left {
         left: 5%;
         @mixin atExtraSmall {
             left: -15%;
         }
     }
-
+    
     &__connector_acoustic-right {
         right: 5%;
         @mixin atExtraSmall {
             right: -15%;
         }
     }
-
+    
     &__connector:hover {
         background: $activeConnector;
     }
-
+    
     &__connector:hover > div {
         background: $activeConnector;
         -webkit-transform: scale(1.1);
-                transform: scale(1.1);
+        transform: scale(1.1);
     }
-
+    
     &__switch {
         text-align: center;
         display: block;
@@ -128,33 +140,70 @@
         -webkit-transition: all 1s;
         transition: all 1s;
     }
-
+    
     &__switch_left {
         left: -10px;
     }
-
+    
     &__switch_right {
         right: -10px;
     }
-
-     /* CONNECTORS FOR Acoustic GUITAR */
-
-     &__connector_0-acoustic,
-     &__connector_1-acoustic,
-     &__connector_2-acoustic,
-     &__connector_3-acoustic,
-     &__connector_4-acoustic,
-     &__connector_5-acoustic {
+    
+    /* CONNECTORS FOR BASS GUITAR */
+    
+    &__connector_0-bass {
+        top: 57%;
+        width: 41px;
+        
+        @mixin atExtraSmall {
+            width: 121px;
+           
+        }
+    }
+    
+    &__connector_1-bass {
+        top: 41%;
+        width: 55px;
+        
+        @mixin atExtraSmall {
+            width: 133px;
+        }
+    }
+    &__connector_2-bass {
+        top: 25%;
+        width: 70px;
+        
+        @mixin atExtraSmall {
+            width: 148px;
+        }
+    }
+    &__connector_3-bass {
+        top: 9%;
+        width: 90.5\px;
+        
+        @mixin atExtraSmall {
+            width: 169px;
+        }
+    }
+    
+    /* CONNECTORS FOR Acoustic GUITAR */
+    
+    &__connector_0-acoustic,
+    &__connector_1-acoustic,
+    &__connector_2-acoustic,
+    &__connector_3-acoustic,
+    &__connector_4-acoustic,
+    &__connector_5-acoustic {
         width: 38px;
-
+        
         @mixin atExtraSmall {
             width: 110px;
         }
-     }
+    }
     &__connector_0-acoustic {
         top: 52%;
     }
-
+    
     &__connector_1-acoustic {
         top: 39%;
     }
@@ -170,12 +219,12 @@
     &__connector_5-acoustic {
         top: 52%;
     }
-
+    
     /* CONNECTORS FOR ELECTRIC GUITAR */
     &__connector_0-electric {
         width: 124px;
         top: 12.7%;
-
+        
         @mixin atExtraSmall {
             width: 204.5px;
         }
@@ -202,7 +251,7 @@
         }
     }
     &__connector_4-electric {
-
+        
         width: 71px;
         top: 45.9%;
         @mixin atExtraSmall {
@@ -272,12 +321,12 @@
     -moz-border-radius: 18px;
     -ms-border-radius: 18px;
     -o-border-radius: 18px;
-
+    
     @mixin atMedium {
         flex-basis: 15%;
         margin-top: 145px;
     }
-
+    
     &__hint {
         font-weight: 300;
     }
@@ -289,7 +338,7 @@
     width: 100%;
     margin: 0 auto;
     overflow-y: scroll;
-
+    
     @mixin atMedium {
         width: 216px;
     }
@@ -300,15 +349,15 @@
         color: white;
         display: -webkit-box;
         display: -ms-flexbox;
-
+        
         display: flex;
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-evenly;
         padding-bottom: 5px;
         letter-spacing: 1px;
-
-
+        
+        
         @mixin atMedium {
             font-size: 1rem;
         }

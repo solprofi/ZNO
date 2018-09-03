@@ -11,7 +11,7 @@ gulp.task('watch', function () {
         }
     });
 
-    watch("./app/index.html", function () {
+    watch(["./app/index.html","./app/electric.html", "./app/acoustic.html", "./app/bass.html" ], function () {
         browserSync.reload();
     });
 

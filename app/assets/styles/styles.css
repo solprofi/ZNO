@@ -4,3 +4,6 @@
 @import "base/_global";
 @import "modules/_heading.css";
 @import "modules/_guitar.css";
+@import "modules/_main-page.css";
+@import "modules/_main-nav.css";
+@import "modules/_guitar-choice.css";

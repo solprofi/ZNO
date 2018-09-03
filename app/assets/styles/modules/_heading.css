@@ -1,5 +1,4 @@
 .guitar-tuner {
-
     &__heading {
         position: relative;
         text-align: center;
@@ -11,14 +10,14 @@
         top: 50%;
         display: block;
         content: "";
-        width: 12%;
+        width: 8%;
         height: 2px;
         background: black;
         @mixin atSmall {
-            width: 22%;
+            width: 20%;
         }
         @mixin atMedium {
-            width: 32%;
+            width: 29%;
         }
     }
 

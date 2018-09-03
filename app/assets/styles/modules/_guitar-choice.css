@@ -1,0 +1,27 @@
+.guitar-choice {
+    &__heading {
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.5rem;
+        @mixin atMedium {
+            font-size: 2rem;
+        }
+    }
+    
+    &__subheading {
+        text-align: center;
+        font-size: 1.2rem;
+        @mixin atMedium {
+            font-size: 1.5rem;
+        }
+    }
+    
+    &__hint {
+        text-align: center;
+        font-size: 1rem;
+        @mixin atMedium {
+            font-size: 1.2rem;
+        }
+    }
+}

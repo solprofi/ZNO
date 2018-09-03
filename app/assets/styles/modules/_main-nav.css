@@ -1,0 +1,42 @@
+.main-nav {
+    background: $navbarBg;
+}
+
+.main-list {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.219);
+    
+    &__item {
+        height: 65px;
+        flex-basis: 8%;
+        text-align: center;
+    }
+    
+    &__item:first-of-type {
+        margin-right: auto;
+    }
+
+    &__link {
+        display: block;
+        text-transform: uppercase;
+        padding: 20px 10px;
+        border-bottom: 1px solid transparent;
+        border-radius: 2px;
+        transition: all .5s;
+    }
+    
+    &__link:hover {
+        border-bottom: 1px solid $borderBottomColor;
+        transform: scale(1.05);
+    }
+
+    &__link_logo,
+    &__link_logo:hover {
+        border-bottom: none !important;
+    }
+
+}
