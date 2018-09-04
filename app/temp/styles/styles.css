@@ -450,6 +450,12 @@ template {
   display: none;
 }
 
+/* Switch parameters*/
+
+/* navigation container parameters */
+
+/* Headings for main page */
+
 body {
     font-family: "Quicksand", sans-serif;
     color: #333;
@@ -1223,6 +1229,7 @@ ul {
         text-align: center;
         font-weight: 700;
         font-size: 1.5rem;
+        color: black;
     }
 
 @media (min-width: 768px) {
@@ -1235,6 +1242,7 @@ ul {
 .guitar-choice__subheading {
         text-align: center;
         font-size: 1.2rem;
+        color: black;
     }
 
 @media (min-width: 768px) {
@@ -1247,6 +1255,7 @@ ul {
 .guitar-choice__hint {
         text-align: center;
         font-size: 1rem;
+        color: black;
     }
 
 @media (min-width: 768px) {

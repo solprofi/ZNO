@@ -12,9 +12,17 @@ $buttonTextColor: rgb(255, 255, 255);
 $listItemBorderColor: rgb(144, 211, 144);
 $activeTuneColor: rgb(199, 108, 108);
 
+/* Switch parameters*/ 
 $switchRadius: 35px;
 $switchColor: black;
 $switchPassiveBG: rgb(204, 204, 204);
 $switchActiveBG: rgb(114, 183, 122);
 
+/* navigation container parameters */
 $navigationContainerPadding: 20px;
+
+
+/* Headings for main page */
+$mainHeadingColor: black;
+$mainSubeadingColor: black;
+$mainHintColor: black;
