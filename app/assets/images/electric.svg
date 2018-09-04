@@ -29,35 +29,33 @@
     }
         
         @keyframes sound {
-             0% {
-        fill: green;
-    }
-    30% {
-        fill: rgb(33, 141, 33);
-    }
-    50% {
-        fill: rgb(85, 163, 85);
-    }
-    70% {
-        fill: rgb(156, 194, 156);
-    }
-    80% {
-        fill: rgb(179, 204, 179);
-    }
-    90% {
-        fill: rgb(202, 211, 202);
-    }
-    100% {
-        fill: rgb(221, 221, 221	);
-    }
+            0% {
+                fill: green;
+                
+            }
+            30% {
+                fill: rgb(33, 141, 33);
+            }
+            50% {
+                fill: rgb(85, 163, 85);
+            }
+            70% {
+                fill: rgb(156, 194, 156);
+            }
+            80% {
+                fill: rgb(179, 204, 179);
+            }
+            90% {
+                fill: rgb(202, 211, 202);
+            }
+            100% {
+                fill: rgb(221, 221, 221	);
+            }
         }
         .active {
-            stroke-width:3.5px !important;
             stroke: rgb(31, 187, 96) !important;
             animation: sound 2.5s ease-in-out; 
-            -webkit-animation: sound 2.5s linear;
-            
-            <!-- stroke-dasharray: 100; -->
+            -webkit-animation: sound 2.5s ease-in-out;
             transition: all 1s ease-in-out;
             -webkit-transition: all 1s ease-in-out;
         }
@@ -75,7 +73,10 @@
         .cls-11{fill:#b5b5b5;}
         .cls-12{mask:url(#mask);}
         .cls-13{mix-blend-mode:hard-light;}
-        .cls-14{fill:#f2694b;}.cls-15{opacity:0.2;}.cls-16,.cls-17,.cls-18,.cls-19,.cls-21,.cls-22{fill:none;stroke:#fff;}.cls-16{stroke-width:2.5px;}.cls-17{stroke-width:2.2px;}.cls-18{stroke-width:1.5px;}.cls-19{stroke-width:3px;}.cls-20{fill:#666;}.cls-21{stroke-width:2px;}.cls-22{stroke-width:4px;}.cls-23{filter:url(#luminosity-noclip);}
+        .cls-14{fill:#f2694b;}.cls-15{opacity:0.2;}.cls-16,.cls-17,.cls-18,.cls-19,.cls-21,
+        .cls-22{fill:none;stroke:#fff;}
+        .cls-16{stroke-width:2.5px;}.cls-17{stroke-width:2.2px;}.cls-18{stroke-width:1.5px;}.cls-19{stroke-width:3px;}.cls-20{fill:#666;}.cls-21{stroke-width:2px;}
+        .cls-22{stroke-width:4px;}.cls-23{filter:url(#luminosity-noclip);}
         </style>
         <filter id="luminosity-noclip" x="422" y="922" width="173" height="12" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
             <feFlood flood-color="#fff" result="bg"/>

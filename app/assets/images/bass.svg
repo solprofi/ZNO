@@ -47,11 +47,10 @@
         fill: rgb(202, 211, 202);
     }
     100% {
-        fill: rgb(221, 221, 221	);
+       fill: rgb(221, 221, 221	);
     }
         }
         .active {
-            stroke-width:3.5px !important;
             stroke: rgb(31, 187, 96) !important;
             animation: sound 2.5s linear; 
             -webkit-animation: sound 2.5s linear;

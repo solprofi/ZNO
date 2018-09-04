@@ -396,3 +396,35 @@
         text-align: center;
     }
 }
+
+@keyframes sound {
+    0% {
+        fill: green;
+        stroke: rgb(31, 187, 96) !important;
+        
+    }
+    30% {
+        fill: rgb(33, 141, 33);
+        stroke: rgb(33, 141, 33) !important;
+    }
+    50% {
+        fill: rgb(85, 163, 85);
+        stroke: rgb(85, 163, 85) !important;
+    }
+    70% {
+        fill: rgb(156, 194, 156);
+        stroke: rgb(156, 194, 156) !important;
+    }
+    80% {
+        fill: rgb(179, 204, 179);
+        stroke: rgb(179, 204, 179) !important;
+    }
+    90% {
+        fill: rgb(202, 211, 202);
+        stroke: rgb(202, 211, 202) !important;
+    }
+    100% {
+        fill: rgb(221, 221, 221	);
+        stroke: rgb(221, 221, 221	) !important;
+    }
+}
