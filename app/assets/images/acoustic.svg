@@ -2,66 +2,54 @@
     xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="550px" height="550px" viewBox="0 0 1000 1000">
     <defs>
         <style>
-        @-webkit-keyframes sound {
-            0% {
-             opacity: 1;
-                stroke: #fff !important;
-                stroke-width:2.5px !important;
-            }
-            30% {
-             opacity: 8;
-                stroke: rgb(31, 187, 96) !important;
-                stroke-width:3.5px !important;
-                stroke: rgb(31, 187, 96) !important;
-
-            }
-            50% {
-             opacity: 5;
-                stroke: rgb(31, 187, 96) !important;
-                stroke-width:6.5px !important;
-                stroke: rgb(31, 187, 96) !important;
-
-            }
-            70% {
-             opacity: 4;
-                stroke: rgb(31, 187, 96) !important;
-                stroke-width:3.5px !important;
-                stroke: rgb(31, 187, 96) !important;
-
-            }
-            100% {
-             opacity:3;
-                stroke: #fff !important;
-                stroke-width:2.5px !important;
-            }
-        }
+         @-webkit-keyframes sound {
+             0% {
+        fill: green;
+    }
+    30% {
+        fill: rgb(33, 141, 33);
+    }
+    50% {
+        fill: rgb(85, 163, 85);
+    }
+    70% {
+        fill: rgb(156, 194, 156);
+    }
+    80% {
+        fill: rgb(179, 204, 179);
+    }
+    90% {
+        fill: rgb(202, 211, 202);
+    }
+    100% {
+        fill: rgb(221, 221, 221	);
+    }
+    }
+        
         @keyframes sound {
-            0% {
-                opacity: 1;
-                fill: green;
-                stroke-width:3.5px !important;
-            }
-            30% {
-                opacity: .8;
-                fill: rgb(31, 187, 96);
-                stroke-width:3.5px !important;
-            }
-            50% {
-                opacity: .5;
-                fill: rgb(31, 187, 96);
-                stroke-width:3.5px !important;
-            }
-            70% {
-                opacity: .4
-                stroke-width:3.5px !important;
-            }
-            100% {
-                opacity: .3;
-                <!-- stroke-dashoffset: 1000; -->
-            }
+             0% {
+        fill: green;
+    }
+    30% {
+        fill: rgb(33, 141, 33);
+    }
+    50% {
+        fill: rgb(85, 163, 85);
+    }
+    70% {
+        fill: rgb(156, 194, 156);
+    }
+    80% {
+        fill: rgb(179, 204, 179);
+    }
+    90% {
+        fill: rgb(202, 211, 202);
+    }
+    100% {
+        fill: rgb(221, 221, 221	);
+    }
         }
         .active {
-            stroke-width:3.5px !important;
             stroke: rgb(31, 187, 96) !important;
             animation: sound 2.5s linear; 
             -webkit-animation: sound 2.5s linear;

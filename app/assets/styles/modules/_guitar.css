@@ -20,8 +20,6 @@
         display: block;
         flex-basis: 40%;
         margin: 0 auto 55px auto;
-        -webkit-box-shadow: 1px 1px 25px 1px  #bebebe,
-        -1px -1px 25px 1px #bebebe;
         box-shadow: 1px 1px 25px 1px  #bebebe,
         -1px -1px 25px 1px #bebebe;
         border-radius: 18px;
@@ -49,8 +47,6 @@
     width: 360px;
     margin-top: 60px;
     background: $guitarBg;
-    -webkit-box-shadow: 1px 1px 25px 1px  #bebebe,
-    -1px -1px 25px 1px #bebebe;
     box-shadow: 1px 1px 25px 1px  #bebebe,
     -1px -1px 25px 1px #bebebe;
     border-radius: 18px;
@@ -68,7 +64,7 @@
     &__image_acoustic {
         margin-left: -95px;
     }
-
+    
     &__image_bass {
         margin-left: -90px;
         margin-top: -45px;
@@ -157,7 +153,7 @@
         
         @mixin atExtraSmall {
             width: 121px;
-           
+            
         }
     }
     
@@ -317,11 +313,8 @@
     height: 330px;
     background: $listBg;
     border-radius: 18px;
-    -webkit-border-radius: 18px;
-    -moz-border-radius: 18px;
-    -ms-border-radius: 18px;
-    -o-border-radius: 18px;
-    
+    box-shadow: 1px 1px 25px 1px  #e0e0e0,
+    -1px -1px 25px 1px #e6e6e6;
     @mixin atMedium {
         flex-basis: 15%;
         margin-top: 145px;
@@ -330,6 +323,7 @@
     &__hint {
         font-weight: 300;
     }
+    
 }
 
 .tunes-list {
@@ -342,24 +336,27 @@
     @mixin atMedium {
         width: 216px;
     }
+    
     &__item {
-        font-size: 1.2rem;
         position: relative;
-        font-weight: 300;
-        color: white;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        
-        display: flex;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-evenly;
+        display: block;
+        justify-content: space-between;
         padding-bottom: 5px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid $listItemBorderColor;
+        
         letter-spacing: 1px;
-        
-        
+        font-size: 1.2rem;
+        font-weight: 300;
+        text-align: right;
+        color: white;
+        cursor: pointer;
+        @mixin atSmall {
+            display: flex;
+        }
         @mixin atMedium {
-            font-size: 1rem;
+            font-size: .8rem;
+            letter-spacing: 0;
         }
     }
     
@@ -368,7 +365,7 @@
         content: "";
         position: absolute;
         left: 0;
-        top: 15%;
+        top: 10%;
         width: 6px;
         height: 6px;
         background: $selectDot;
@@ -378,10 +375,24 @@
             left: 2%;
         }
         @mixin atSmall {
-            left: 5%;
+            left: -3%;
         }
         @mixin atMedium {
-            left: -2%;
+            left: -7%;
         }
+    }
+    
+    &__name {
+        text-align: center;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+    
+    &__name_active {
+        color: $activeTuneColor;
+    }   
+    
+    &__tune {
+        text-align: center;
     }
 }

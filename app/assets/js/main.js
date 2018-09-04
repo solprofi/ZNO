@@ -1,91 +1,87 @@
-var acousticArray = JSON.parse(acousticJson);
-var electricArray = JSON.parse(electricJson);
-var bassArray = JSON.parse(bassJson);
-var ukuleleArray = JSON.parse(ukuleleJson);
-
+// let acousticArray = JSON.parse(acousticJson);
+// let electricArray = JSON.parse(electricJson);
+// let bassArray = JSON.parse(bassJson);
+let soundArray;
 const soundExtension = '.wav';
 
-var currentMode = 'Standart';
-var currentGuitarType = 'Acoustic';
-var currentHowlStringSounds;
-var currentSoundNameList;
+let currentMode = 'Standart';
+let currentGuitarType = window.location.pathname.slice(1).split('.').shift();
 
-function handleModeChange(modeRadioButton) {
-    changeMode(modeRadioButton.value);
+let currentHowlStringSounds = [];
+let currentSoundNameList;
+
+let guitarButtonList = [];
+let STRINGNUMBER;
+let previousActive = 0;
+let folderPath;
+
+function init() {
     updateSounds();
-    updateUI();
+    for (i = 0; i < STRINGNUMBER; i++) {
+        assignButton(i);
+    }
 }
 
-function handleGuitarTypeChange(guitarTypeRadioButton) {
-    changeGuitarType(guitarTypeRadioButton.value);
-    updateSounds();
-    updateUI();
-}
 
-function changeGuitarType(guitarTypeName) {
-    currentGuitarType = guitarTypeName;
+function assignButton(i) {
+    guitarButtonList.push(document.getElementById("switch-" + i.toString()));
+    guitarButtonList[i].addEventListener('click',  function () {
+        playString(i);
+    });
+}
+function playString(stringNumber) {
+    currentHowlStringSounds[stringNumber].play();
 }
 
 function changeMode(modeName) {
     currentMode = modeName;
 }
 
+function handleModeChange(mode, id) {
+    changeMode(mode);
+    updateSounds();
+    updateUI(id);
+}
+
 function updateSounds() {
-    var folderPath;
     switch (currentGuitarType) {
-        case 'Acoustic':
-            folderPath = '/sounds/acoustic_wav/';
-            currentSoundNameList = acousticArray[currentMode];
+        case 'acoustic':
+            folderPath = 'assets/sounds/acoustic_wav/';
+            soundArray = JSON.parse(acousticJson);
+            currentSoundNameList = soundArray[currentMode];
+            STRINGNUMBER = 6;
             break;
-        case 'Bass':
-            folderPath = '/sounds/bass_wav/';
-            currentSoundNameList = bassArray[currentMode];
+        case 'bass':
+            folderPath = 'assets/sounds/bass_wav/';
+            soundArray = JSON.parse(bassJson);
+            currentSoundNameList = soundArray[currentMode];
+            STRINGNUMBER = 4;
             break;
-        case 'Electric':
-            folderPath = '/sounds/electric_wav/';
-            currentSoundNameList = electricArray[currentMode];
-            break;
-        case 'Ukulele':
-            folderPath = '/sounds/ukulele_wav/';
-            currentSoundNameList = ukuleleArray[currentMode];
+        case 'electric':
+            folderPath = 'assets/sounds/electric_wav/';
+            soundArray = JSON.parse(electricJson);
+            currentSoundNameList = soundArray[currentMode];
+            STRINGNUMBER = 6;
             break;
     }
 
-    currentHowlStringSounds = [];
-    for (i = 0; i < 6; i++) {
-        currentHowlStringSounds.push(new Howl({
+    for (i = 0; i < STRINGNUMBER; i++) {
+        currentHowlStringSounds[i] = new Howl({
             src: [folderPath + currentSoundNameList[i] + soundExtension]
-        }));
+        });
     }
 }
 
-function updateUI() {
-    var drawNumbers = false;
-    for (i = 0; i < 6; i++) {
-        var upperStrWithNumbers = currentSoundNameList[i].substring(0, 1).toUpperCase() + currentSoundNameList[i].substring(1, currentSoundNameList[i].length).replace('s', '#');
-        if (!drawNumbers) {
-            upperStrWithNumbers = upperStrWithNumbers.replace(/[0-9]/g, '');
-        }
-        guitarButtonList[i].innerHTML = upperStrWithNumbers;
+function updateUI(id) {
+    if( id !== previousActive ) {
+        document.getElementById(`tuning-${previousActive}`).classList.remove('tunes-list__item_active');
+        document.getElementById(`tuning-${id}`).classList.add('tunes-list__item_active');
+        document.getElementById(`tuning-${previousActive}`).childNodes[1].classList.remove('tunes-list__name_active');
+        document.getElementById(`tuning-${id}`).childNodes[1].classList.add('tunes-list__name_active');
+
+        previousActive = id;
     }
+
 }
 
-function playString(stringNumber) {
-    currentHowlStringSounds[stringNumber - 1].play();
-}
-
-var guitarButtonList = [];
-
-function assignButton(i) {
-    guitarButtonList.push(document.getElementById("string_" + i.toString()));
-    guitarButtonList[i - 1].onclick = function () {
-        playString(i);
-    }
-}
-
-for (i = 1; i <= 6; i++) {
-    assignButton(i);
-}
-
-updateSounds();
-updateUI();
+init();

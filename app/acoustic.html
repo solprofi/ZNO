@@ -12,14 +12,8 @@
       <ul class="main-list">
         <li class="main-list__item">
           <a class="main-list__link main-list__link_logo" href="./index.html">
-            <img src="" alt="logo">
+            <img class="main-list__logo" src="./assets/images/Logo_1.png" alt="logo">
           </a>
-        </li>
-        <li class="main-list__item">
-          <a class="main-list__link" href="">lorem</a>
-        </li>
-        <li class="main-list__item">
-          <a class="main-list__link" href="">lorem</a>
         </li>
         <li class="main-list__item">
           <a class="main-list__link" href="">lorem</a>
@@ -65,69 +59,17 @@
       <div class="tuning">
         <h3 class="tuning__hint">Select Tuning</h3>
         <ul class="tunes-list">
-          <li class="tunes-list__item tunes-list__item_active">
-            <div class="tunes-list__name">Standart</div>
-            <div class="tunes-list__tune">L o r e m</div>
+          <li class="tunes-list__item tunes-list__item_active" id="tuning-0" onclick="handleModeChange('Standart', 0)">
+            <div class="tunes-list__name tunes-list__name_active" >Standart</div>
+            <div class="tunes-list__tune">E4 B3 G3 D3 A2 E2</div>
           </li>
-          <li class="tunes-list__item">
-            <div class="tunes-list__name">Standart</div>
-            <div class="tunes-list__tune">L o r e m</div>
+          <li class="tunes-list__item" id="tuning-1" onclick="handleModeChange('Drop D', 1)">
+            <div class="tunes-list__name" >Drop D</div>
+            <div class="tunes-list__tune">E4 B3 G3 D3 A2 D2</div>
           </li>
-          <li class="tunes-list__item">
-            <div class="tunes-list__name">Standart</div>
-            <div class="tunes-list__tune">L o r e m</div>
-          </li>
-          <li class="tunes-list__item">
-            <div class="tunes-list__name">Standart</div>
-            <div class="tunes-list__tune">L o r e m</div>
-          </li>
-          <li class="tunes-list__item">
-            <div class="tunes-list__name">Standart</div>
-            <div class="tunes-list__tune">L o r e m</div>
-          </li>
-          <li class="tunes-list__item">
-            <div class="tunes-list__name">Standart</div>
-            <div class="tunes-list__tune">L o r e m</div>
-          </li>
-          <li class="tunes-list__item">
-            <div class="tunes-list__name">Standart</div>
-            <div class="tunes-list__tune">L o r e m</div>
-          </li>
-          <li class="tunes-list__item">
-            <div class="tunes-list__name">Standart</div>
-            <div class="tunes-list__tune">L o r e m</div>
-          </li>
-          <li class="tunes-list__item">
-            <div class="tunes-list__name">Standart</div>
-            <div class="tunes-list__tune">L o r e m</div>
-          </li>
-          <li class="tunes-list__item">
-            <div class="tunes-list__name">Standart</div>
-            <div class="tunes-list__tune">L o r e m</div>
-          </li>
-          <li class="tunes-list__item">
-            <div class="tunes-list__name">Standart</div>
-            <div class="tunes-list__tune">L o r e m</div>
-          </li>
-          <li class="tunes-list__item">
-            <div class="tunes-list__name">Standart</div>
-            <div class="tunes-list__tune">L o r e m</div>
-          </li>
-          <li class="tunes-list__item">
-            <div class="tunes-list__name">Standart</div>
-            <div class="tunes-list__tune">L o r e m</div>
-          </li>
-          <li class="tunes-list__item">
-            <div class="tunes-list__name">Standart</div>
-            <div class="tunes-list__tune">L o r e m</div>
-          </li>
-          <li class="tunes-list__item">
-            <div class="tunes-list__name">Standart</div>
-            <div class="tunes-list__tune">L o r e m</div>
-          </li>
-          <li class="tunes-list__item">
-            <div class="tunes-list__name">Standart</div>
-            <div class="tunes-list__tune">L o r e m</div>
+          <li class="tunes-list__item" id="tuning-2" onclick="handleModeChange('Drop C#', 2)">
+            <div class="tunes-list__name">Drop C#</div>
+            <div class="tunes-list__tune">E4 B3 G3 D3 A2 C#2</div>
           </li>
         </ul>
       </div>
@@ -145,7 +87,9 @@
       </div>
     </div>
   </section>
+  <script src="./assets/js/howler.min.js"></script>
+  <script src="./assets/js/acousticJSON.js"></script>
   <script src="./assets/js/acoustic.js"></script>
-  <script src="./assets/js/svg-work.js"></script>
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>

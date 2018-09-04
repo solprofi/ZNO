@@ -2,7 +2,7 @@ let svg = document.getElementById('guitar-svg');
 
 // ANIMATION DURATION IN MS
 
-let DURATION = 2500;
+let DURATION = 3000;
 let isActive = false;
 
 svg.addEventListener('load', function() {
