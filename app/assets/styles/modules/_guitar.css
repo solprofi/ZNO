@@ -117,7 +117,7 @@
     }
     
     &__connector:hover > div {
-        background: $activeConnector;
+        background: $switchActiveBG;
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
     }
@@ -126,15 +126,17 @@
         text-align: center;
         display: block;
         position: absolute;
-        width: 35px;
-        height: 35px;
-        line-height: 35px;
+        width: $switchRadius;
+        height: $switchRadius;
+        line-height: $switchRadius;
         border-radius: 50px;
-        background: $passiveConnector;
+        background: $switchPassiveBG;
         top: -16px;
         cursor: pointer;
         -webkit-transition: all 1s;
         transition: all 1s;
+
+        color: $switchColor;
     }
     
     &__switch_left {
@@ -394,37 +396,5 @@
     
     &__tune {
         text-align: center;
-    }
-}
-
-@keyframes sound {
-    0% {
-        fill: green;
-        stroke: rgb(31, 187, 96) !important;
-        
-    }
-    30% {
-        fill: rgb(33, 141, 33);
-        stroke: rgb(33, 141, 33) !important;
-    }
-    50% {
-        fill: rgb(85, 163, 85);
-        stroke: rgb(85, 163, 85) !important;
-    }
-    70% {
-        fill: rgb(156, 194, 156);
-        stroke: rgb(156, 194, 156) !important;
-    }
-    80% {
-        fill: rgb(179, 204, 179);
-        stroke: rgb(179, 204, 179) !important;
-    }
-    90% {
-        fill: rgb(202, 211, 202);
-        stroke: rgb(202, 211, 202) !important;
-    }
-    100% {
-        fill: rgb(221, 221, 221	);
-        stroke: rgb(221, 221, 221	) !important;
     }
 }

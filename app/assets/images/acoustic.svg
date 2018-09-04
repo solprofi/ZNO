@@ -2,62 +2,61 @@
     xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" width="550px" height="550px" viewBox="0 0 1000 1000">
     <defs>
         <style>
-         @-webkit-keyframes sound {
-             0% {
-        fill: green;
-    }
-    30% {
-        fill: rgb(33, 141, 33);
-    }
-    50% {
-        fill: rgb(85, 163, 85);
-    }
-    70% {
-        fill: rgb(156, 194, 156);
-    }
-    80% {
-        fill: rgb(179, 204, 179);
-    }
-    90% {
-        fill: rgb(202, 211, 202);
-    }
-    100% {
-        fill: rgb(221, 221, 221	);
-    }
+    @-webkit-keyframes sound {
+        0% {
+            fill: green;
+        }
+        30% {
+            fill: rgb(33, 141, 33);
+        }
+        50% {
+            fill: rgb(85, 163, 85);
+        }
+        70% {
+            fill: rgb(156, 194, 156);
+        }
+        80% {
+            fill: rgb(179, 204, 179);
+        }
+        90% {
+            fill: rgb(202, 211, 202);
+        }
+        100% {
+            fill: rgb(221, 221, 221	);
+        }
     }
         
-        @keyframes sound {
-             0% {
-        fill: green;
-    }
-    30% {
-        fill: rgb(33, 141, 33);
-    }
-    50% {
-        fill: rgb(85, 163, 85);
-    }
-    70% {
-        fill: rgb(156, 194, 156);
-    }
-    80% {
-        fill: rgb(179, 204, 179);
-    }
-    90% {
-        fill: rgb(202, 211, 202);
-    }
-    100% {
-        fill: rgb(221, 221, 221	);
-    }
+    @keyframes sound {
+        0% {
+            fill: green;
         }
-        .active {
-            stroke: rgb(31, 187, 96) !important;
-            animation: sound 2.5s linear; 
-            -webkit-animation: sound 2.5s linear;
-            <!-- stroke-dasharray: 100; -->
-            transition: all 1s ease-in-out;
-            -webkit-transition: all 1s ease-in-out;
+        30% {
+            fill: rgb(33, 141, 33);
         }
-        .cls-1{fill:#e6e6e6;}.cls-2{fill:#594436;}.cls-3{fill:#b5b5b5;}.cls-4{fill:#edab5a;}.cls-5{fill:#fff;opacity:0.14;}.cls-6{fill:#75787a;}.cls-7{fill:#3f3f3f;}.cls-8{fill:#ebffff;}.cls-9{fill:#adadad;opacity:0.26;}.cls-10{fill:#b3b3b3;}</style>
+        50% {
+            fill: rgb(85, 163, 85);
+        }
+        70% {
+            fill: rgb(156, 194, 156);
+        }
+        80% {
+            fill: rgb(179, 204, 179);
+        }
+        90% {
+            fill: rgb(202, 211, 202);
+        }
+        100% {
+            fill: rgb(221, 221, 221	);
+        }
+    }
+    .active {
+        stroke: rgb(31, 187, 96) !important;
+        animation: sound 2.5s linear !important; 
+        -webkit-animation: sound 2.5s linear;
+        transition: all 1s ease-in-out;
+        -webkit-transition: all 1s ease-in-out;
+    }
+    .cls-1{fill:#e6e6e6;}.cls-2{fill:#594436;}.cls-3{fill:#b5b5b5;}.cls-4{fill:#edab5a;}.cls-5{fill:#fff;opacity:0.14;}.cls-6{fill:#75787a;}.cls-7{fill:#3f3f3f;}.cls-8{fill:#ebffff;}.cls-9{fill:#adadad;opacity:0.26;}.cls-10{fill:#b3b3b3;}</style>
     </defs>
     <title>Artboard 3</title>
     <polygon class="cls-1" points="383.03 321.57 382.16 301.61 317.75 310.39 318.61 330.37 383.03 321.57"/>
