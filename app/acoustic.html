@@ -57,7 +57,14 @@
       </div>
       
       <div class="tuning">
-        <h3 class="tuning__hint">Select Tuning</h3>
+        <div class="tuning__top-container">
+            <h3 class="tuning__hint">Tuning</h3>
+            <div class="tuning__loop">
+              <label class="tuning__loop-label" for="loop">Loop</label>
+              <input type="checkbox" name="loop" id="loop">
+            </div>
+        </div>
+        
         <ul class="tunes-list">
           <li class="tunes-list__item tunes-list__item_active" id="tuning-0" onclick="handleModeChange('Standart', 0)">
             <div class="tunes-list__name tunes-list__name_active" >Standart</div>

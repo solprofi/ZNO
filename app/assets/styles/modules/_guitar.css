@@ -323,7 +323,25 @@
     }
     
     &__hint {
+        margin: 0;
         font-weight: 300;
+        font-size: 1.1rem;
+    }
+
+    &__top-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 10px;
+        border-top-left-radius: 18px;
+        border-top-right-radius: 18px;
+        background: $tuningTopContainerBg;
+        color: white;
+        letter-spacing: 2px;
+    }
+
+    &__loop-label {
+        font-weight: 300;
+        font-size: 1.1rem;
     }
     
 }
@@ -348,14 +366,12 @@
         border-bottom: 1px solid $listItemBorderColor;
         
         letter-spacing: 1px;
-        font-size: 1.2rem;
+        font-size: 1.25rem;
         font-weight: 300;
         text-align: right;
         color: white;
         cursor: pointer;
-        @mixin atSmall {
-            display: flex;
-        }
+       
         @mixin atMedium {
             font-size: .8rem;
             letter-spacing: 0;
@@ -366,21 +382,22 @@
         display: block;
         content: "";
         position: absolute;
-        left: 0;
-        top: 10%;
-        width: 6px;
-        height: 6px;
-        background: $selectDot;
-        border: 2px solid #eee;
+        left: 3%;
+        top: 25%;
+        width: 10px;
+        height: 10px;
+        background: #eee;
+        border: 2px solid $tuningTopContainerBg;
+        box-shadow: 0 0 0 1px #eee;
         border-radius: 50px;
         @mixin atExtraSmall {
-            left: 2%;
+            left: 4%;
         }
         @mixin atSmall {
-            left: -3%;
+            left: 6%;
         }
         @mixin atMedium {
-            left: -7%;
+            left: 0;
         }
     }
     
@@ -388,6 +405,8 @@
         text-align: center;
         font-weight: 700;
         letter-spacing: 1px;
+        font-size: 1.1rem;
+        padding-bottom: 5px;
     }
     
     &__name_active {
@@ -396,5 +415,6 @@
     
     &__tune {
         text-align: center;
+        font-size: 1rem;
     }
 }

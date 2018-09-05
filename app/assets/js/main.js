@@ -1,6 +1,3 @@
-// let acousticArray = JSON.parse(acousticJson);
-// let electricArray = JSON.parse(electricJson);
-// let bassArray = JSON.parse(bassJson);
 let soundArray;
 const soundExtension = '.wav';
 
@@ -15,6 +12,15 @@ let STRINGNUMBER;
 let previousActive = 0;
 let folderPath;
 
+let isLooped = false;
+
+let loopButton = document.getElementById('loop');
+
+loopButton.addEventListener('click', function() {
+    isLooped = !isLooped;
+    assignLoop();
+});
+
 function init() {
     updateSounds();
     for (i = 0; i < STRINGNUMBER; i++) {
@@ -22,10 +28,32 @@ function init() {
     }
 }
 
+function assignLoop() {
+    for (i = 0; i < STRINGNUMBER; i++) {
+        currentHowlStringSounds[i].loop(isLooped);
+    }
+}
+
+function assignStrings() {
+    for (i = 0; i < STRINGNUMBER; i++) {
+        currentHowlStringSounds[i] = new Howl({
+            src: [folderPath + currentSoundNameList[i] + soundExtension],
+            loop: isLooped
+        });
+    }
+}
+
+function stopPlaying() {
+    for (i = 0; i < STRINGNUMBER; i++) {
+        currentHowlStringSounds[i].stop();
+    }
+}
+
 
 function assignButton(i) {
     guitarButtonList.push(document.getElementById("switch-" + i.toString()));
     guitarButtonList[i].addEventListener('click',  function () {
+        stopPlaying();
         playString(i);
     });
 }
@@ -38,6 +66,7 @@ function changeMode(modeName) {
 }
 
 function handleModeChange(mode, id) {
+    stopPlaying();
     changeMode(mode);
     updateSounds();
     updateUI(id);
@@ -65,11 +94,7 @@ function updateSounds() {
             break;
     }
 
-    for (i = 0; i < STRINGNUMBER; i++) {
-        currentHowlStringSounds[i] = new Howl({
-            src: [folderPath + currentSoundNameList[i] + soundExtension]
-        });
-    }
+    assignStrings();
 }
 
 function updateUI(id) {
