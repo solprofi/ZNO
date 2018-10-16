@@ -1,57 +1,74 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Guitar Tuner</title>
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400" rel="stylesheet">
+  <title>Dimas Project</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <link rel="stylesheet" href="./temp/styles/styles.css">
 </head>
+
 <body>
-  <header class="header">
-    <nav class="main-nav">
-      <ul class="main-list">
-        <li class="main-list__item">
-          <a class="main-list__link main-list__link_logo" href="#/">
-            <img class="main-list__logo" src="./assets/images/Logo_1.png" alt="logo">
-          </a>
+  <div class="container">
+    <header class="header">
+      <ul class="main-nav">
+        <li class="main-nav__item">
+          <a href="" class="main-nav__link">Testing</a>
         </li>
-        <li class="main-list__item">
-          <a class="main-list__link" href="">lorem</a>
+        <li class="main-nav__item">
+          <a href="" class="main-nav__link">News</a>
         </li>
-        <li class="main-list__item">
-          <a class="main-list__link" href="">lorem</a>
+        <li class="main-nav__item">
+          <a href="" class="main-nav__link">About author</a>
         </li>
-        <li class="main-list__item">
-          <a class="main-list__link" href="">lorem</a>
+        <li class="main-nav__item">
+          <a href="" class="main-nav__link">Ratings</a>
         </li>
       </ul>
-    </nav>
-  </header>
-  <section class="guitar-choice">
-    <h1 class="guitar-choice__heading">Online guitar tuner</h1>
-    <h2 class="guitar-choice__subheading">Tune your acoustic, bass and electric guitar</h2>
-    <h3 class="guitar-choice__hint">
-      Pick an instrument and start tuning right away. 
-      Choose frome lorem tuning options
-    </h3>
+    </header>
     
-    <div class="choice-box">
-      <div class="choice-box__guitar">
-        <img class="choice-box__image" src="./assets/images/acoustic_icon.png" alt="Acoustic">
-        <div class="choice-box__name">Acoustic guitar tuner</div>
-        <a href="./acoustic.html" class="choice-box__button">Tune Acoustic</a>
+    <div class="slideshow-container slideshow-container_orange">
+      <div id='slide-1' class="slide slide_hero slide_hero-1 js-slide-1">
+        <div class="hero-container">
+          <h2 class="hero-container__heading">Music for everyone.</h2>
+          <div class="btn-container">
+            <a class="btn btn-ghost btn-ghost_hero" href="#/">Get Newsic Free</a>
+            <a class="btn btn-full btn-full_hero" href="#/">Get Newsic Premium</a>
+          </div>
+        </div>
       </div>
-      <div class="choice-box__guitar">
-        <img class="choice-box__image" src="./assets/images/electric_icon.png" alt="Electric">
-        <div class="choice-box__name">Electric guitar tuner</div>
-        <a href="./electric.html" class="choice-box__button">Tune Electric</a>
+      <div class="slide slide_hero slide_hero-2 js-slide-1">
+        <div class="hero-container">
+          <h2 class="hero-container__heading">Premium for your whole family.Just $19.</h2>
+          <div class="btn-container">
+            <a class="btn btn-full btn-full_hero" href="#/">Learn More</a>
+          </div>
+        </div>
       </div>
-      <div class="choice-box__guitar">
-        <img class="choice-box__image" src="./assets/images/bass_icon.png" alt="Bass">
-        <div class="choice-box__name">Bass guitar tuner</div>
-        <a href="./bass.html" class="choice-box__button">Tune Bass</a>
+      <div class="slide slide_hero slide_hero-3 js-slide-1">
+        <div class="hero-container">
+          <h2 class="hero-container__heading">Premium for Students, now with Hulu. Only $5/month.</h2>
+          <div class="btn-container">
+            <a class="btn btn-full btn-full_hero" href="#/">Learn More</a>
+          </div>
+        </div>
       </div>
+      <div class="slide slide_hero slide_hero-4 js-slide-1">
+        <div class="hero-container">
+          <h2 class="hero-container__heading">Play Spotify on PlayStation® and on Xbox® One.</h2>
+          <div class="btn-container">
+            <a class="btn btn-full btn-full_hero" href="#/">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <a class="prev js-prev-1">&#10094;</a>
+      <a class="next js-next-1">&#10095;</a>
     </div>
-  </section>
+  </div>
+  
+
+  <script src="./assets/js/slider.js" defer></script>
+  <script src="./assets/js/slider-index.js" defer></script>
 </body>
+
 </html>

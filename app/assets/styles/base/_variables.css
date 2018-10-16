@@ -1,31 +1,4 @@
-$subheading: rgb(82, 173, 93);
-$guitarBg: rgb(114, 183, 122);
-$listBg: rgb(114, 183, 122);
-$selectDot: rgb(74,	184,	120	);
-$activeConnector: rgb(114, 183, 122);
-$passiveConnector: rgb(204, 204, 204);
-$navbarBg: rgb(255, 255, 255);
-$linkBorderBottomColor: rgb(31, 141, 31);
-$tunerButtonBg: rgb(209, 64, 64);
-$tunerButtonActiveBg: rgb(179, 57, 57);
-$buttonTextColor: rgb(255, 255, 255);
-$listItemBorderColor: rgb(144, 211, 144);
-$activeTuneColor: rgb(199, 108, 108);
+// Example of variable creation
+// $subheading: rgb(82, 173, 93);
 
-$tuningTopContainerBg: rgb(102, 165, 109);
-
-/* Switch parameters*/ 
-$switchRadius: 35px;
-$switchColor: black;
-$switchPassiveBG: rgb(204, 204, 204);
-$switchActiveBG: rgb(114, 183, 122);
-
-/* navigation container parameters */
-$navigationContainerPadding: 20px;
-
-
-/* Headings for main page */
-$mainHeadingColor: black;
-$mainSubeadingColor: black;
-$mainHintColor: black;
 

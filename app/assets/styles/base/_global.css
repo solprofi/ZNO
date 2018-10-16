@@ -1,6 +1,5 @@
 body {
-    font-family: "Quicksand", sans-serif;
-    color: #333;
+    color: #000515;
     overflow-x: hidden;
 }
 
@@ -11,6 +10,7 @@ img {
 
 * {
     box-sizing: border-box;
+    font-family: "Lato", sans-serif;
 }
 
 
@@ -20,6 +20,7 @@ a {
 }
 
 ul {
+    list-style: none;
     padding: 0;
     margin: 0;
 }

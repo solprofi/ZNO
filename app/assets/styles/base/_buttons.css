@@ -1,0 +1,69 @@
+.btn:link,
+.btn:visited,
+input[type=submit] {
+    display: inline-block;
+    padding: 8px 20px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: all .4s;
+
+    @mixin atSmall {
+        padding: 10px 30px;
+    }
+
+    @mixin atMedium {
+        padding: 10px 35px;
+    }
+
+    @mixin atLarge {
+        padding: 12px 40px;
+    }
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #fff;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #cf6d17;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #cf6d17;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #cf6d17;
+    color: #fff;
+}
+
+.btn-ghost_hero:link,
+.btn-ghost_hero:visited {
+    color: white !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 2px solid #e67e22;
+}
+
+.btn-full_hero:link,
+.btn-full_hero:visited {
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 2px solid #e67e22;
+}
